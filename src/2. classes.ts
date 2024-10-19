@@ -35,7 +35,7 @@ console.log(employee1, Department.fiscalYear);
 
 // Singleton Pattern - only one instance of MarketingDepartment can exists.
 // private constructor, getInstance method.
-class MarketingDepartment extends Department {
+class MarketingDepartment extends Department { // classes can Inherite from only one class.
   private lastReport: string;
   private static instance: MarketingDepartment;
 
