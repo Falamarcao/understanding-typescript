@@ -10,20 +10,20 @@ addition = (n1: number, n2: number) => n1 + n2;
 
 interface Named {
   readonly name: string;
-  lastName?: string; // (?) the question mark sets the property, parameters or methods as optional.
+  lastName?: string; // `?` the question mark sets the property, parameters or methods as optional.
 }
 
 interface Greetable extends Named {
   // We can have multiple interfaces after `extends` separated by commas.
   greet(phrase: string): void;
 
-  optionalMethod?(x: unknown): void; // (?) optional method
+  optionalMethod?(x: unknown): void; // `?` optional method
 }
 
 class Person implements Greetable {
   // We can have multiple interfaces after `implements` separated by commas.
   name: string;
-  age?: number; // (?) optional parameter
+  age?: number; // `?` optional parameter
 
   constructor(name: string, age?: number) {
     this.name = name;
